@@ -34,7 +34,13 @@ Test
 in project root
 
 `make dbload` - add 100k users to users table
+
+`make clear` - clear users table
+
+`make dbload-1m` - add 1 million users to users table
+
 `make test` - run mail checker and notification sender job 
+
 
 Sample output `make test` command
 ```shell

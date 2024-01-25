@@ -12,10 +12,12 @@ help: ## This help
 
 console-php: ## Run php bash
 	$(DOCKER_EXEC) php-fpm sh
-
+clear-users: ## insert 1million users
+	$(DOCKER_EXEC) php-fpm php clear_users_table.php
 dbload: ## insert 100k users
 	$(DOCKER_EXEC) php-fpm php dbload.php
-
+dbload-1m: ## insert 1million users
+	$(DOCKER_EXEC) php-fpm php dbload-1m.php
 test: ## test cronjob
 	$(DOCKER_EXEC) php-fpm php job.php
 
